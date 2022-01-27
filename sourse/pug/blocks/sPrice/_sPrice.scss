@@ -1,7 +1,14 @@
 // start .sPrice
 .sPrice {
 	background: #F9EBE1;
-
+	position: relative;
+	.picture-bg{
+		z-index: 1;
+	}
+	h2{
+		position: relative;
+		z-index: 4;
+	}
 		// --sPT: ;
 		// --sPB: ;
 		// --sTPB: ;
