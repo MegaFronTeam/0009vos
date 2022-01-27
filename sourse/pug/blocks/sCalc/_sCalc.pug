@@ -6,5 +6,88 @@ mixin sCalc(data)
 				h2 Как заказать дизайн-проект
 				p.fw-600 Если Ваша квартира находится в Москве или любом другом городе Московской области - Вам даже не нужно приезжать к нам в студию. Мы выезжаем для консультаций, обмеров, составления ТЗ на проект и заключения договоров абсолютно бесплатно. Вам остается лишь позвонить нам по телефону #[a(href="tel:+74952018220") +74952018220], пригласить нас к себе на объект в удобное время или просто нажать на кнопку ниже. 
 				+e.btn(href="#") Заказать
+			+e.gal
+				+pic("sCalc-3.jpg",'bg',0)
+				+pic("sCalc-2.jpg",'bg',0)
+				+pic("sCalc-1.jpg",'bg',0)
+				+pic("sCalc-4.jpg",'bg',0)
+				+pic("sCalc-5.jpg",'bg',0)
 			+b.calc
+				form
+					h4.text-center Расчитать стоимость ремонта
+					.tabs
+						.tabs__caption
+							.tabs__btn.active Квартира
+							.tabs__btn Коттедж
+							.tabs__btn Офис
+						.tabs__wrap
+							mixin tab()
+								.tabs__content&attributes(attributes)
+									mixin gr(t)
+										+e.group
+											+e.group-title= t
+											block
+									+e.body
+										.row
+											.col-lg-8
+												+gr(`Площадь, м²`)
+												+e.range-wrap
+													input(type="text" data-max='150' ).range-js
+												+gr(`Качество ремонта`)
+													.row
+														.col-auto
+															+in-c('radio','Косметический','typ')(checked)
+														.col-auto
+															+in-c('radio','Капитальный','typ')
+														.col-auto
+															+in-c('radio','Дизайнерский','typ')
+												+gr(`Расположение`)
+													.row
+														.col-auto
+															+in-c('radio','Москва','place')
+														.col-auto
+															+in-c('radio','Московская область','place')
+														.col-auto
+															+in-c('radio','Другое','place')
+												+gr(`Количество комнат`)
+													.row
+														.col-auto
+															+in-c('radio','1','count')
+														.col-auto
+															+in-c('radio','2','count')
+														.col-auto
+															+in-c('radio','3','count')
+														.col-auto
+															+in-c('radio','4','count')
+														.col-auto
+															+in-c('radio','5','count')
+											.col-lg-4
+												+gr(`Виды работ`)
+												+e.wrap
+													+in-c('checkbox','Электромонтажные работы')
+													+in-c('checkbox','Снтехнические работы')
+													+in-c('checkbox','Штукатурка стен')
+													+in-c('checkbox','Шпаклевка стен под обои')
+													+in-c('checkbox','Штукатурка стен')
+													+in-c('checkbox','Шпаклевка стен под обои')
+													+in-c('checkbox','Штукатурка стен')
+													+in-c('checkbox','Шпаклевка стен под обои')
+													+in-c('checkbox','Снтехнические работы')
+													+in-c('checkbox','Шпаклевка стен под обои')
+													+in-c('checkbox','Шпаклевка стен под обои')
+													+in-c('checkbox','Шпаклевка стен под обои')
+													+in-c('checkbox','Шпаклевка стен под обои')
+													+in-c('checkbox','Шпаклевка стен под обои')
+							+tab().active
+							+tab()
+							+tab()
+					+b.form-wrap 
+						.row
+							.col-md
+								+input("Имя")
+							.col-md
+								+input("Номер телефона",'tel')
+							.col-md-auto
+								button.btn.btn-primary Отправить
+						+policy
 	// end sCalc

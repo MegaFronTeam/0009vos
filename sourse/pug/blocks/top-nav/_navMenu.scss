@@ -24,7 +24,9 @@
 	a{
 		display: block;
 		padding: rem(10) calc(var(--bs-gutter-x) / 2);
-		color: $body-color;
+		&:not(:hover){
+			color: $body-color;
+		}
 	}
 }
 

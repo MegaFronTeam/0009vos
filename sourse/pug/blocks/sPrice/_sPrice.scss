@@ -13,6 +13,10 @@
 		.card-title{
 			font-size: rem(20);
 		}
+		.card{
+			position: relative;
+			z-index: 4;
+		}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

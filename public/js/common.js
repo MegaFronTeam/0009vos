@@ -152,6 +152,10 @@ function eventHandler() {
 	});
 	// modal window
 
+	$(".range-js").ionRangeSlider({
+		skin: "round"
+	});
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
