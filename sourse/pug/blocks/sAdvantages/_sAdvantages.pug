@@ -1,0 +1,18 @@
+mixin sAdvantages(data)
+	// start sAdvantages
+	+b.SECTION.sAdvantages.section#sAdvantages&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Наши преимущества
+				
+			.row
+				mixin item(i,t,p)
+					+e.col.col-sm-4
+						+e.img-wrap
+							img(src=`img/svg/sAdvantages-${i}.svg`, alt="")
+						.h5.strong= t
+						p!= p
+				+item(`1`,`Живое портфолио`,`Вы можете посмотреть наши квартиры`)
+				+item(`2`,`Официальный договор`,`Работаем официально по договору - Вы спите спокойно`)
+				+item(`3`,`Поэтапная оплата работ`,`Мы бережем Ваш бюджет`)
+	// end sAdvantages

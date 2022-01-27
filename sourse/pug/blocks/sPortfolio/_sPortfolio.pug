@@ -1,0 +1,15 @@
+mixin sPortfolio(data)
+	// start sPortfolio
+	+b.SECTION.sPortfolio.section#sPortfolio&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Портфолио
+				.h5 Свежие портфолио за 2022 год
+				
+			.row.gy-4
+				- for (var x = 0; x < 2; x++)
+					+card(`sPortfolio-1`,`Ремонт квартиры в Иваново`,`Стоимость ремонта 300 т.р. Срок выполнения - 1 месяц`)
+					+card(`sPortfolio-2`,`Однокомнатная квартира 35 кв. м.`,`Срок выполнения - 18 дней`)
+					+card(`sPortfolio-3`,`Люкс ремонт 4-комнатной квартиры в Крылатском`,`Ремонт квартир в Крылатском с перепланировкой`)
+					+card(`sPortfolio-4`,`Элитный ремонт четырехкомнатной квартиры`,`В ремонте использовались черновые и отделочные материалы высокого уровня.`)
+	// end sPortfolio

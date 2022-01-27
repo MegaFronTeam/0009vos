@@ -1,0 +1,16 @@
+mixin topLine()
+	// start topLine
+	+b.SECTION.topLine.section#topLine&attributes(attributes)
+		.container
+			.row
+				.col
+					+soc()
+				.col-auto.d-none.d-lg-block
+					+e.text
+						+icon("location")
+						+e.caption 127055 г. Москва, ул. Лесная, д. 43 (БЦ "Лесная 43") - м. Белорусская
+				.col-auto
+					+e.text(href="tel:+7(495)201-82-20")
+						+icon("call-calling")
+						+e.caption +7 (495) 201-82-20
+	// end topLine

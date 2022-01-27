@@ -1,0 +1,54 @@
+include ../../_assets/bemto/bemto
+- set_bemto_settings({ modifier: "--" })
+include components/menu.pug
+include components/icon.pug
+include components/breadcrumb.pug
+include components/pugination.pug
+include components/soc.pug
+include components/pic.pug
+include components/img.pug
+include components/btn.pug
+
+include components/ddgroup.pug
+
+mixin arrow()
+	.swiper-button-hand.swiper-button-hand-prev.swiper-button-prev
+		+icon('chevron-left')
+	.swiper-button-hand.swiper-button-hand-next.swiper-button-next
+		+icon('chevron-right')
+//- /arrow for swiper-slider
+
+mixin ie11()
+	//- modernizer and for ie11
+	 
+	<!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
+
+mixin addblock()
+	+b.addBlock
+		+e.btn--minus(type="button")
+		input(type="text" value="1")
+		+e.btn--plus(type="button")
+
+mixin card(i,t,p, cl='col-xl-3')
+	.col-lg-4.col-sm-6(class= cl)
+		+b.card(href="#")
+			+pic(`${i}.jpg`,'bg',0)
+			//- img.card-img-top(src='...' alt='...')
+			.card-body
+				.card-title= t
+				if p
+					p.card-text= p
+				//- a.btn.btn-primary(href='#') Go somewhere
+mixin card2(i,t,t2, p, pr )
+	.col-lg-4.col-sm-6(class= cl)
+		+b.card
+			+pic(`${i}.jpg`,'bg',0)
+			//- img.card-img-top(src='...' alt='...')
+			.card-body
+				.card-title= t
+				.fw-500= t2
+				if p
+					p.card-text= p
+				.h5.strong.text-primary.mt-a.mb-3= pr
+
+				a.btn.btn-outline-primary.w-100(href='#').mb-3 Оставить заявку

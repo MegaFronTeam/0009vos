@@ -1,0 +1,45 @@
+// start .sSteps
+.sSteps {
+		// --sPT: ;
+		// --sPB: ;
+		--sTPB: 48px;
+		counter-reset: num;
+		.section-title{
+			max-width: rem(1100);
+		}
+		&__item {
+			position: relative; 
+			@include media-breakpoint-up(xl) {
+				--size: 128px;
+			}
+			--size: 78px;
+			padding-left: calc(var(--size) + #{rem(24)});
+			padding-top: rem(20);
+			&::before {
+				content: counter(num);
+				counter-increment: num;
+				width: var(--size);
+				height: var(--size);
+				border-radius: 50%;
+				position: absolute;
+				left: 0;
+				top: 0;
+				color: $primary;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				@include rfs(80px);
+				font-weight: bold;
+				background: #FFFFFF;
+				box-shadow: 0px 4px 8px rgba(145, 126, 113, 0.05);
+
+			}
+		}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sSteps

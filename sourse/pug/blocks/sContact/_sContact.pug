@@ -1,0 +1,7 @@
+mixin sContact()
+	// start sContact
+	+b.SECTION.sContact#sContact&attributes(attributes)
+		+e.map
+			script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c' type='text/javascript')
+			+e.map-widget#map
+	// end sContact

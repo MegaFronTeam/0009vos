@@ -1,0 +1,42 @@
+mixin menu-toggle()
+	+b.toggle-menu-mobile--js
+		span
+mixin mob-mnu()
+	-
+		//- let path = require('path');
+		//- let fs = require('fs');
+		//- var requestURL = 'top-nav.json';
+		//- var request = new XMLHttpRequest();
+		//- request.open('GET', requestURL);
+		//- request.responseType = 'json';
+		//- let dataJson = JSON.parse(json);
+	//- h1= dataJson['lala'] 
+	+b.menu-mobile--js
+		+b.toggle-menu-mobile--js
+			span
+		+e.inner
+			+mnu()
+	//  мобильное меню
+mixin top-nav() 
+	// start top-nav
+	+b.top-nav.block-with-lazy
+		.container
+			.row
+				.col-auto
+					+b.toggle-menu-mobile--2js
+						span
+				.col-lg-auto.col
+					+e.logo(href="/")
+						+pic('logo.png','',0)
+				//- .col
+				.col-lg.order-lg-0.order-last
+					.menu-mobile.menu-mobile--js
+						.menu-mobile__inner
+							.d-lg-none
+								+menu-toggle()
+							+mnu()
+				.col-auto
+					+e.btn(href="#") Заказать звонок
+				.col-auto.d-lg-none
+					+menu-toggle()
+	// end top-nav

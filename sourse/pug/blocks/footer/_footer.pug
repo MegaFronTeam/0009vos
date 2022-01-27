@@ -1,0 +1,36 @@
+mixin footer()
+	+b.FOOTER.footer
+		.container
+			.row.gy-4
+				.col-xxl-4.col-xl.col-lg-auto
+					.mb-3
+						a(href="/")
+							+pic("logo-footer.png",'',0)
+					p Наши выезды на объекты для обмеров, составления технического задания и заключения договора БЕСПЛАТНЫ по всей Москве и Московской области.
+					p Свидетельство о государственной регистрации серия 50 № 013328741 от 08.08.13 ИНН 522802864502
+						br
+						| КПП 0
+						br
+						| ОГРН 313500522000012
+				.col-xl-3.col-auto
+					+e.title Меню
+					+mnu
+				.col-xl-auto.col
+					+e.title Контакты
+					+e.text(href="tel:+7(495)201-82-20")
+						+icon("call-calling")
+						+e.caption +7 (495) 201-82-20
+					br
+					
+					+e.text(href="mailto:vosinterior@yandex.ru")
+						+icon("sms")
+						+e.caption vosinterior@yandex.ru
+					br
+
+					+e.text
+						+icon("location")
+						+e.caption 127055 г. Москва, ул. Лесная, д. 43 (БЦ "Лесная 43") - м. Белорусская
+					br
+					+soc
+					a.btn.btn-primary(href="#") Заказать звонок 
+			+e.copy  © 2022 «Дизайн-проекты квартир и домов в Москве и Московской области на заказ».

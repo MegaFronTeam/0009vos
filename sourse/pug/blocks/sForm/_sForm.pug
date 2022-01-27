@@ -1,0 +1,15 @@
+mixin sForm()
+	// start sForm
+	+b.sForm#sForm&attributes(attributes)
+		.container
+			+form-wrap
+				+e.title Оставьте заявку на бесплатный замер и составление сметы
+				.row
+					.col-md
+						+input("Имя")
+					.col-md
+						+input("Номер телефона",'tel')
+					.col-md-auto
+						button.btn.btn-primary Отправить
+				+policy
+	// end sForm

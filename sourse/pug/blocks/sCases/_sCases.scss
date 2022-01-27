@@ -1,0 +1,52 @@
+// start .sCases
+.sCases {
+		--sPT: 102px;
+		// --sPB: ;
+		// --sTPB: ;
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sCases
+
+.card{
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	box-shadow: 0px 4px 8px rgba(145, 126, 113, 0.05);
+	background-color: #fff;
+	&:hover{
+		box-shadow: 0px 4px 8px rgba(145, 126, 113, 0.25);
+
+	}
+	border-radius: 8px;
+	overflow: hidden;
+	position: relative;
+	&:not(:hover){
+		color: $body-color;
+	}
+	picture{
+		// margin-bottom: rem(24);
+	}
+	&-title{
+		padding-bottom: rem(16);
+		font-weight: bold;
+	}
+	p{
+		color: $body-color;
+
+	}
+	&-body{
+		padding-top: rem(24);
+		padding-left: rem(24);
+		padding-right: rem(24);
+		padding-bottom: rem(8);
+		flex-direction: column;
+		flex-grow: 1;
+		display: flex;
+	}
+}

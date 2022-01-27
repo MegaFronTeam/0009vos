@@ -1,0 +1,60 @@
+// start .sNews
+.sNews {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+		.swiper-slide{
+			@include media-breakpoint-up(sm) {
+
+				max-width: calc(50% - 12px);
+			}
+			max-width: 280px;
+		}
+
+		.card{
+			@include media-breakpoint-up(lg) {
+
+				flex-direction: row;
+			}
+			picture{
+				// height: 100%;
+				@include media-breakpoint-up(xxl) {
+					
+					width: 288px;
+				}
+				@include media-breakpoint-up(xl) {
+					
+					width: 228px;
+				}
+				@include media-breakpoint-up(lg) {
+
+					min-height: 216px;
+					width: 108px;
+					flex:  0 0 auto;
+					margin-bottom: 0;
+					display: flex;
+					img{
+						height: auto;
+					}
+				}
+			}
+		}
+		&__wrap{
+			position: relative;
+			margin-left: auto;
+			margin-right: auto;
+			max-width: rem(1390);
+
+		}
+		&__slider{
+			padding: 22px;
+			margin: -22px;
+		}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sNews
