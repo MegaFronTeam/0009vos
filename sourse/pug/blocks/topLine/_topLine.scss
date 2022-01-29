@@ -3,9 +3,15 @@
 	.topLine {
 		--sPT:12px;
 		--sPB:12px;
+		top: 0;
+		left: 0;
 		background: #917E71;
 		color: #fff;
 		font-size: 13px;
+		z-index: 1300;
+		position: relative;
+		position: fixed;
+		width: 100vw;
 		&__text{
 			display: flex;
 			align-items: center;
