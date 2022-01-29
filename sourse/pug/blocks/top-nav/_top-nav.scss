@@ -88,7 +88,10 @@
 	@include media-breakpoint-up(xxl) {
 		--menuw: #{rem(288 + 24)};
 	}
+	@include media-breakpoint-up(xl) {
 	--menuw: #{rem(208 + 24)};
+}
+--menuw: #{rem(208 + 4)};
 	.container{
 		padding-left: rem(10);
 		padding-right: rem(10);
