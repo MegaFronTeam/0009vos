@@ -11,8 +11,21 @@
 	}
 	ul{
 		display: block;
+		--bs-gutter-x: 0;
+		ul{
+			display: none !important;
+		}
+		li{
+			padding-right: 0;
+			&::after{
+				display: none;
+			}
+		}
 		a{
-			color: #fff;
+			color: #fff !important;
+			&:hover{
+				color: $primary !important;
+			}
 			padding-top: 0;
 			padding-bottom: 20px;
 			padding-left: 0;

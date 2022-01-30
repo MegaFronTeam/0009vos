@@ -1,7 +1,10 @@
 // start .headerBlock
 .headerBlock {
 	margin-bottom: 1px;
-	min-height: calc(100vh - 54px); 
+	@include media-breakpoint-up(md) {
+
+		min-height: calc(100vh - 54px); 
+	}
 	display: flex;
 	flex-direction: column;
 	// align-items: center;

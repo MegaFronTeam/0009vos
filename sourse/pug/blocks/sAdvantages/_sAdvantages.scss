@@ -4,14 +4,17 @@
 	text-align: center;
 	position: relative;
 	z-index: 2;
+	@include media-breakpoint-up(md) {
 	margin-top: 50px;
 	margin-bottom: 50px;
+}
 	&::before{
 		content: '';
 		@include a-cent1;
 		background-image: url(../img/svg/sAdvantages-bg.svg);
 		background-size: contain;
 		height: 140%;
+		pointer-events: none;
 		@include media-breakpoint-up(sm) {
 
 			width: 180%;

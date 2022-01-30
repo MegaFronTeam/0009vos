@@ -7,6 +7,10 @@
 			// @extend .form-control;
 		//  outline: 0 !important;
 		 resize: none;
+		 &:hover,
+		 &:focus{
+			 border-color: $primary;
+		 }
  	}
  	&__btn{
  		cursor: pointer;

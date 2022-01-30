@@ -513,3 +513,15 @@ h2{
 .text-light{
 	color: #C4C4C4;
 }
+
+.btn{
+	box-shadow: none !important;
+}
+.btn-primary{
+	&:active,
+	&:focus,
+	&.active{
+		background: #c6671f;
+		border-color: #C6671F;
+	}
+}
