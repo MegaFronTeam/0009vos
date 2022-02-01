@@ -36,23 +36,6 @@ mixin top-nav()
 											mixin li(a)
 												li.has-children
 													+e.link(href="#")= a
-													ul.ul-grid
-														mixin a(i)
-															li: a(href="#")
-																+pic(`pic-${i}.jpg`,'bg',0)
-														- for (var x = 0; x < 2; x++)
-															+a('1')
-															+a('2')
-															+a('3')
-															+a('4')
-															+a('5')
-															+a('6')
-														+a('6')
-														+a('4')
-														+a('1')
-														+a('2')
-														+a('3')
-														+a('5')
 											+li("Ремонт и строительство под ключ")
 											+li("Дизайн интерьера")
 											+li("Дизайн ванной")
@@ -66,6 +49,19 @@ mixin top-nav()
 											+li("Сборка мебели")
 										.d-lg-none 
 											+mnu
+									ul.ul-grid
+										mixin a(i)
+											li
+												- for (var x = 1; x < 7; x++)
+													a(href=`img/@2x/pic-${x}.jpg` data-fancybox=`gal-${i}`).d-none
+												a(href=`img/@2x/pic-${i}.jpg` data-fancybox=`gal-${i}`)
+													+pic(`pic-${i}.jpg`,'bg',0)
+										+a('1')
+										+a('2')
+										+a('3')
+										+a('4')
+										+a('5')
+										+a('6')
 				.col-lg-auto.col
 					+e.logo(href="/")
 						+pic('logo.png','',0)
